@@ -1,0 +1,82 @@
+
+### 1) Programa da sequência de Fibonacci e verificação de número
+
+```python
+def fibonacci_sequence(n):
+    fib_seq = [0, 1]
+    while fib_seq[-1] < n:
+        fib_seq.append(fib_seq[-1] + fib_seq[-2])
+    return fib_seq
+
+def is_in_fibonacci(n):
+    fib_seq = fibonacci_sequence(n)
+    if n in fib_seq:
+        return f"O número {n} pertence à sequência de Fibonacci."
+    else:
+        return f"O número {n} NÃO pertence à sequência de Fibonacci."
+
+# Exemplo de uso
+n = int(input("Informe um número: "))
+print(is_in_fibonacci(n))
+```
+
+### 2) Programa que verifica a existência da letra 'a'
+
+```python
+def count_a_in_string(s):
+    count = s.lower().count('a')
+    if count > 0:
+        return f"A letra 'a' aparece {count} vezes na string."
+    else:
+        return "A letra 'a' não aparece na string."
+
+# Exemplo de uso
+s = input("Digite uma string: ")
+print(count_a_in_string(s))
+```
+
+### 3) Cálculo da variável SOMA
+
+No código fornecido:
+
+```plaintext
+int INDICE = 12, SOMA = 0, K = 1;
+enquanto K < INDICE faça {
+    K = K + 1;
+    SOMA = SOMA + K;
+}
+imprimir(SOMA);
+```
+
+Esse código faz um loop enquanto `K` for menor que `INDICE`, somando o valor de `K` a `SOMA`. Ao final do processamento, a variável `SOMA` terá o valor de **78**.
+
+### 4) Descubra a lógica e complete o próximo elemento
+
+a) 1, 3, 5, 7, **9**  
+Lógica: Números ímpares consecutivos.
+
+b) 2, 4, 8, 16, 32, 64, **128**  
+Lógica: Potências de 2.
+
+c) 0, 1, 4, 9, 16, 25, 36, **49**  
+Lógica: Quadrados perfeitos (n²).
+
+d) 4, 16, 36, 64, **100**  
+Lógica: Quadrados perfeitos múltiplos de 4 (n² onde n é par).
+
+e) 1, 1, 2, 3, 5, 8, **13**  
+Lógica: Sequência de Fibonacci.
+
+f) 2, 10, 12, 16, 17, 18, 19, **20**  
+Lógica: Mistura de números consecutivos e não consecutivos.
+
+### 5) Problema dos interruptores e lâmpadas
+
+Para resolver este problema em duas idas, siga os passos abaixo:
+
+1. Ligue o primeiro interruptor e aguarde alguns minutos.
+2. Desligue o primeiro interruptor e ligue o segundo.
+3. Vá para a sala das lâmpadas:
+   - A lâmpada que está acesa corresponde ao segundo interruptor.
+   - A lâmpada que está apagada, mas está quente, corresponde ao primeiro interruptor.
+   - A lâmpada que está apagada e fria corresponde ao terceiro interruptor
